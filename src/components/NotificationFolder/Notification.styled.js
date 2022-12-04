@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const Notification = styled.p`    
+export const Message = styled.p`    
     border-radius: 5px;
     padding: 20 px;     
     display: flex;

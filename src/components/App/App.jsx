@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import React from 'react';
-import styled from 'styled-components';
 import 'modern-normalize';
 import Statistics from '../StatisticsFeedback/Statistics';
 import FeedbackOptions from '../FeedbackOptionsFolder/FeedbackOptions';
