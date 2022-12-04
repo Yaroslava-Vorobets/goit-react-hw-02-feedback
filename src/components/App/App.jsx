@@ -1,9 +1,15 @@
 import { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 import 'modern-normalize';
-import Statistics from './StatisticsFeedback/Statistics';
-import FeedbackOptions from './FeedbackOptionsFolder/FeedbackOptions';
-import Section from './SectionFolder/Section';
-import Notification from './NotificationFolder/Notification';
+import Statistics from '../StatisticsFeedback/Statistics';
+import FeedbackOptions from '../FeedbackOptionsFolder/FeedbackOptions';
+import Section from '../SectionFolder/Section';
+import Notification from '../NotificationFolder/Notification';
+import { Wrap } from './App.Styled';
+
+
+
 
 export class App extends Component {
 
@@ -37,15 +43,15 @@ export class App extends Component {
     const onLeaveFeedback = this.onFeedbackAction
     return (
       <>
-        <Section  title="Please leave feedback">
-          <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback}></FeedbackOptions>
-        </Section>
-        <Section title="Statistics">
-          {total ? (<Statistics good={good} neutral={neutral} bad={bad} total={total} percentage={positivePercentage} />)
-            : (<Notification message="There is no feedback"></Notification>)}
-          
-        </Section>
-       
+        <Wrap>
+          <Section  title="Please leave feedback">
+            <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback}></FeedbackOptions>
+          </Section>
+          <Section title="Statistics">
+            {total ? (<Statistics good={good} neutral={neutral} bad={bad} total={total} percentage={positivePercentage} />)
+              : (<Notification message="There is no feedback"></Notification>)}            
+          </Section>
+       </Wrap>
     </>
   );}
 

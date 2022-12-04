@@ -1,4 +1,3 @@
-// import { Global } from '@emotion/react';
 import 'modern-normalize';
 import { injectGlobal } from '@emotion/css'
 
@@ -39,6 +38,5 @@ injectGlobal`
 // }
   }
 `
-
 
 
